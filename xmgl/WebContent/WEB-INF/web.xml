@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>核心代码</display-name>
+    <!--获得系统web路径  -->
+	<context-param>   
+       <param-name>webAppRootKey</param-name>   
+       <param-value>webApp.root</param-value> 
+    </context-param>   
+    <listener>   
+       <listener-class> org.springframework.web.util.WebAppRootListener   
+       </listener-class>   
+    </listener>   
+  <!-- 配置监听器用于监听spring一系列配置,例如每一层接口之间的注入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<!--add by zhangbr@ccthanking.com 文件上传servlet映射  -->
+	<servlet>
+        <description/>
+        <display-name>UploadServlet</display-name>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.ccthanking.framework.fileUpload.servlet.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+	
+	<!-- 解决工程编码过滤器 -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter> 
+	    <filter-name>securityFilter</filter-name>
+	    <filter-class>com.ccthanking.framework.filter.securityFilter</filter-class> 
+	    <init-param>
+	      <param-name>allow_url</param-name>
+	      <param-value>/,/index.jsp,/userController.do?login,/userController.do?logout,/simulateLogin.jsp,/wttbweixin.jsp</param-value>
+	    </init-param>
+	    <init-param>
+	      <param-name>error_page</param-name>
+	      <param-value>/jsp/framework/error/500.jsp</param-value>
+	    </init-param>
+  	</filter> 
+
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+      <filter-name>securityFilter</filter-name>
+      <url-pattern>*.do</url-pattern>
+   </filter-mapping>
+	<filter-mapping>
+      <filter-name>securityFilter</filter-name>
+      <url-pattern>*.jsp</url-pattern>
+   </filter-mapping>
+   
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:application_context.xml</param-value>
+	</context-param>
+	<!-- spring的IOC机制 springmvc的入口 -->
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:application_viewresolver.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- 表选字典servlet add by wangzh -->
+	<servlet>
+		<servlet-name>GetDicFromTable</servlet-name>
+		<servlet-class>com.ccthanking.framework.dic.GetDicFromTable</servlet-class>
+	</servlet>
+		<servlet-mapping>
+		<servlet-name>GetDicFromTable</servlet-name>
+		<url-pattern>/servlet/GetDicFromTable</url-pattern>
+	</servlet-mapping>
+	<!-- 列表打印servlet add by wangzh -->
+	<servlet>
+		<servlet-name>TableExp</servlet-name>
+		<servlet-class>com.ccthanking.framework.print.ExportAsExcel</servlet-class>
+	</servlet>
+		<servlet-mapping>
+		<servlet-name>TableExp</servlet-name>
+		<url-pattern>/servlet/TableExp</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 投资统计servlet add by xhb -->
+	<servlet>
+    	<display-name>TztjServlet</display-name>
+    	<servlet-name>TztjServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.TztjServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>TztjServlet</servlet-name>
+    	<url-pattern>/TztjServlet</url-pattern>
+  	</servlet-mapping>
+	<!-- 查询报表servlet add by xhb -->
+	<servlet>
+    	<display-name>CharServlet</display-name>
+    	<servlet-name>CharServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.CharServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>CharServlet</servlet-name>
+    	<url-pattern>/CharServlet</url-pattern>
+  	</servlet-mapping>
+	<!-- 更换报表类型servlet add by xhb -->
+  	<servlet>
+    	<display-name>ChartXmlServlet</display-name>
+    	<servlet-name>ChartXmlServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.ChartXmlServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ChartXmlServlet</servlet-name>
+    	<url-pattern>/ChartXmlServlet</url-pattern>
+  	</servlet-mapping>
+	  <servlet>
+    <description></description>
+    	<display-name>XmkgXmlServlet</display-name>
+    	<servlet-name>XmkgXmlServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.XmkgXmlServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>XmkgXmlServlet</servlet-name>
+    	<url-pattern>/XmkgXmlServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 项目执行情况servlet add by cbl -->
+   <servlet>
+
+    	<display-name>XmzxqkServlet</display-name>
+    	<servlet-name>XmzxqkServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.XmzxqkServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>XmzxqkServlet</servlet-name>
+    	<url-pattern>/XmzxqkServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 合同类型统计 -->
+  	<servlet>
+
+    	<display-name>HtlxTjServlet</display-name>
+    	<servlet-name>HtlxTjServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.HtlxTjServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>HtlxTjServlet</servlet-name>
+    	<url-pattern>/HtlxTjServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 合同状态统计 -->
+  	<servlet>
+
+    	<display-name>HtztTjServlet</display-name>
+    	<servlet-name>HtztTjServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.HtztTjServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>HtztTjServlet</servlet-name>
+    	<url-pattern>/HtztTjServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 资金管理统计 -->
+  	<servlet>
+
+    	<display-name>ZjglZjtjServlet</display-name>
+    	<servlet-name>ZjglZjtjServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.ZjglZjtjServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ZjglZjtjServlet</servlet-name>
+    	<url-pattern>/ZjglZjtjServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 资金使用区域统计 -->
+  	<servlet>
+
+    	<display-name>ZjglZjshqyServlet</display-name>
+    	<servlet-name>ZjglZjshqyServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.ZjglZjshqyServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ZjglZjshqyServlet</servlet-name>
+    	<url-pattern>/ZjglZjshqyServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 项目投资统计 -->
+  	<servlet>
+
+    	<display-name>XmtzDtfxServlet</display-name>
+    	<servlet-name>XmtzDtfxServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.XmtzDtfxServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>XmtzDtfxServlet</servlet-name>
+    	<url-pattern>/XmtzDtfxServlet</url-pattern>
+  	</servlet-mapping>
+  	<!-- 项目管理 公司项目数量 add by cbl -->
+  	   <servlet>
+    	<display-name>XmglgsxmslServlet</display-name>
+    	<servlet-name>XmglgsxmslServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.XmglgsxmslServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>XmglgsxmslServlet</servlet-name>
+    	<url-pattern>/XmglgsxmslServlet</url-pattern>
+  	</servlet-mapping>
+  	 <!-- 单位计划执行情况DwjhzxqkServlet add by cbl -->
+  	   <servlet>
+    	<display-name>DwjhzxqkServlet</display-name>
+    	<servlet-name>DwjhzxqkServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.DwjhzxqkServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>DwjhzxqkServlet</servlet-name>
+    	<url-pattern>/DwjhzxqkServlet</url-pattern>
+  	</servlet-mapping>
+  	<servlet>
+    	<display-name>YdzxqkServlet</display-name>
+    	<servlet-name>YdzxqkServlet</servlet-name>
+    	<servlet-class>com.ccthanking.framework.CommonChart.showchart.servlet.YdzxqkServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>YdzxqkServlet</servlet-name>
+    	<url-pattern>/YdzxqkServlet</url-pattern>
+  	</servlet-mapping>
+	<!-- dwr配置 begin -->
+	<!--
+	<servlet>
+		<servlet-name>initScriptSessionListener</servlet-name>
+		<servlet-class>
+			com.ccthanking.framework.message.comet.InitScriptSession
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	-->
+	<!--dwr servlet-->
+	<!--
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>
+			org.directwebremoting.servlet.DwrServlet
+		</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>pollAndCometEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	-->
+	<!-- dwr 配置 end -->
+	
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/WEB-INF/jsp/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/jsp/500.jsp</location>
+	</error-page>
+
+    <jsp-config>  
+		<taglib>   
+			<taglib-uri>/tld/base.tld</taglib-uri>      
+			<taglib-location>/WEB-INF/tld/base.tld</taglib-location>  
+		</taglib>  
+		<jsp-property-group>
+			<display-name>JSPConfiguration</display-name>
+			<url-pattern>*.html</url-pattern>
+			<el-ignored>true</el-ignored>
+			<page-encoding>UTF-8</page-encoding>
+			<scripting-invalid>false</scripting-invalid>
+			<include-prelude></include-prelude>
+			<include-coda></include-coda>
+		</jsp-property-group> 
+	</jsp-config> 
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

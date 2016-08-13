@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>问题统计</title>
+    <!--Step:1 Import a module loader, such as esl.js or require.js-->
+    <!--Step:1 引入一个模块加载器，如esl.js或者require.js-->
+		<script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet"
+			href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet"
+			href="bootstrap/css/bootstrap-theme.min.css">
+    <script src="asset/js/esl/esl.js"></script>
+    
+    <style type="text/css">
+    .buttomDiv {
+    position :absolute;
+    left : 0px;
+    top :  600px;
+    }
+    
+    div.footer{
+		border:1px solid #CCC;background:#222222;
+		position:fixed;height:100%;width:100%;
+		z-index:100000;left:0%;top:90%;
+	}
+	a{
+		color:#FFF;
+		}
+		.footer .toolbars{
+			border-right:1px solid #FFF;
+			border-left:1px solid #FFF;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			color:#FFF;
+			font-size:14px;
+			font-family: Microsoft YaHei;
+			}
+			
+    </style>
+</head>
+
+<body>
+    <!--Step:2 Prepare a dom for ECharts which (must) has size (width & hight)-->
+    <!--Step:2 为ECharts准备一个具备大小（宽高）的Dom-->
+    <!-- <div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div> -->
+      
+    <div class="test">
+    <div id="main3" style="height:300px;border:1px solid #ccc;padding:10px;"></div>
+    <div id="main4" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+    <div id="main5" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+    
+    </div>
+    
+    <div class="footer">
+    	<div class="container">
+				<div class="row">
+					<div class="col-xs-4 .col-sm-4 col-md-4 toolbars">
+						<span><a href="javascript:void(0);" onclick="main333()" style="color:#FFF;">解决程度</a></span>
+					</div>
+					<div class="col-xs-4 .col-sm-4 col-md-4 toolbars">
+						<span><a href="javascript:void(0);" onclick="main444()" style="color:#FFF;">接收情况</a></span>
+					</div>
+					<div class="col-xs-4 .col-sm-4 col-md-4 toolbars">
+						<span><a href="javascript:void(0);" onclick="main555()" style="color:#FFF;">月度分布</a></span>
+					</div>
+				</div>
+			</div>
+	</div>
+    <!-- <div id="mainMap" style="height:500px;border:1px solid #ccc;padding:10px;"></div> -->
+    
+    <script type="text/javascript">
+    function main555() {
+        $("html,body").animate({scrollTop:$("#main5").offset().top},1000);
+    }
+    function main333() {
+        $("html,body").animate({scrollTop:$("#main3").offset().top},1000);
+    }
+    function main444() {
+        $("html,body").animate({scrollTop:$("#main4").offset().top},1000);
+    }
+    // Step:3 conifg ECharts's path, link to echarts.js from current page.
+    // Step:3 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
+    require.config({
+        paths:{
+            echarts:'js/echarts',
+            'echarts/chart/bar' : 'js/echarts-map',
+            'echarts/chart/line': 'js/echarts-map',
+            'echarts/chart/map' : 'js/echarts-map'
+        }
+    });
+    
+    
+    var optionPie1 = {
+    	    title : {
+    	        text: '解决程度',
+    	        x:'center',
+				textStyle:{fontSize: 20}
+    	    },
+    	    toolbox:{
+    	    	show:true,
+    	    	feature:{
+    	    		restore : {show: true}
+    	    	}
+    	    },
+    	    tooltip : {
+    	        trigger: 'item',
+    	        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    	    },
+    	    calculable : true,
+    	    series : [
+    	        {
+    	            name:'访问来源',
+    	            type:'pie',
+    	            radius : '55%',
+    	            center: ['50%', '60%'],
+    	            data:[
+    	                {value:335, name:'处理中'},
+    	                {value:310, name:'未解决'},
+    	                {value:234, name:'已解决'}
+    	            ]
+    	        }
+    	    ]
+    	};
+    
+    optionBar = {
+    		title : {
+    	        text: '各部门问题接收情况',
+    	        x:'center',
+				textStyle:{fontSize: 20}
+    	    },
+    	    tooltip : {
+    	        trigger: 'axis',
+    	        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+    	            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+    	        }
+    	    },
+    	    toolbox:{
+    	    	show:true,
+    	    	feature:{
+    	    		restore : {show: true}
+    	    	}
+    	    },
+    	    grid:{x:'80px',x2:'10px'},
+    	    calculable : true,
+    	    xAxis : [
+    	        {
+    	            type : 'value'
+    	        }
+    	    ],
+    	    yAxis : [
+    	        {
+    	        	
+    	            type : 'category',
+    	            data : ['项目管理公司', '长建管','办公室','总工办-计划组','总工办-手续组',
+    	                    '总工办-设计组','总工办-排迁组','前期部（征收部）','招标合同',
+    	                    '造价','工程','轨道部','质量安全','财务部','计划宣传部','建计财',]
+    	       // ,axisLabel :{interval:0}
+    	        
+    	        }
+    	    ],
+    	    series : [
+    	        {
+    	            name:'解决',
+    	            type:'bar',
+    	            stack: '总量',
+    	            itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
+    	            data:[2, 3, 1, 2, 6, 3, 4,32,3,2,4,14,22,14,17,21]
+    	        },
+    	        {
+    	            name:'未解决',
+    	            type:'bar',
+    	            stack: '总量',
+    	            itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
+    	            data:[21, 3, 25, 2, 11, 9, 3,20,16,6,28,33,1,3,9,4]
+    	        }
+    	    ]
+    	};
+    
+    optionLine = {
+    		title : {
+    	        text: '问题情况月度分部',
+    	        x:'center',
+				textStyle:{fontSize: 20}
+    	    },
+    	    tooltip : {
+    	        trigger: 'axis'
+    	    },
+    	    toolbox:{
+    	    	show:true,
+    	    	feature:{
+    	    		restore : {show: true}
+    	    	}
+    	    },
+    	    grid:{x:'30px',x2:'10px'},
+    	    calculable : true,
+    	    xAxis : [
+    	        {
+    	            type : 'category',
+    	            boundaryGap : false,
+    	            data : ['01月','02月','03月','04月','05月','06月','07月','08月','09月','10月','11月','12月']
+    	        }
+    	    ],
+    	    yAxis : [
+    	        {
+    	            type : 'value'
+    	        }
+    	    ],
+    	    series : [
+    	        {
+    	            name:'问题数量',
+    	            type:'line',
+    	            stack: '总量',
+    	            data:[120, 132, 101, 134, 90, 230, 210,21,56,76,88,52]
+    	        },
+    	        {
+    	            name:'解决数量',
+    	            type:'line',
+    	            stack: '总量',
+    	            data:[220, 182, 191, 234, 290, 330, 310,89,43,312,446,77,51]
+    	        }
+    	    ]
+    	};
+    // Step:4 require echarts and use it in the callback.
+    // Step:4 动态加载echarts然后在回调函数中开始使用，注意保持按需加载结构定义图表路径
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/line',
+            'echarts/chart/map'
+        ],
+        function (ec) {
+          
+            
+            var myChart3 = ec.init(document.getElementById("main3"));
+            myChart3.setOption(optionPie1);
+            var myChart4 = ec.init(document.getElementById("main4"));
+            myChart4.setOption(optionBar);
+            var myChart5 = ec.init(document.getElementById("main5"));
+            myChart5.setOption(optionLine);
+        }
+    );
+    </script>
+    
+</body>
+</html>

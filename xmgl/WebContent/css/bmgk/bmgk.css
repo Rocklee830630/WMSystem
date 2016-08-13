@@ -1,0 +1,757 @@
+body {font-size:14px;}
+h2 {display:inline; line-height:2em;}
+.table2 {
+	border-left: #000 solid 1px;
+	border-top: #000 solid 1px;
+	margin:10px auto;
+}
+.marginBottom15px {margin-bottom:15px;}
+.table2 tr td,.table2 tr th {
+	line-height: 1.5em;
+	padding: 4px;
+	border-right: #000 solid 1px;
+	border-bottom: #000 solid 1px;
+}
+input[type='text'] {
+	vertical-align: middle;
+	height: 20px;
+	line-height: 16px;
+	padding: 2px;
+}
+.textTable {
+	font-size:14px;
+}
+.textTable tr td,.textTable tr th {
+	line-height: 1.5em;
+	padding: 4px;
+	border-right: #000 solid 0;
+	border-bottom: #000 solid 0;
+	font-weight:normal;
+}
+.textTable th{
+	text-align:left;
+}
+.textTable td{
+	text-align:right;
+}
+.table3 {
+}
+.table3 tr td,.table3 tr th {
+	line-height: 1.5em;
+	padding: 4px;
+	border-right: #000 solid 0;
+	border-bottom: #000 solid 0;
+}
+.table3 tr th {/* border-top: #000 solid 1px; border-bottom: #000 solid 1px; */}
+.B-small-from-table-auto h4{padding:10px;}
+.chartTitle{
+	text-align:center;
+	font-size:14px;
+	font-weight:900;
+}
+.msgTitle{
+	text-align:left;
+	font-size:14px;
+}
+.divBottom{
+	border-bottom:#FFF solid 15px;
+}
+.greyTD div{
+	background-color:RGB(166,166,166);
+	text-align:center;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+}
+.blueTD-DB div{
+	background-color:RGB(85,142,213);
+	text-align:center;
+	width:100%;
+	height:80px;
+	line-height:40px;
+	overflow:hidden;
+}
+.blueTD-SG div{
+	background-color:RGB(55,96,146);
+	text-align:center;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+}
+.blockTD{
+	align:center;
+	width:7%;
+}
+.blockTD div span.titleSpan{
+	font-size:15px;
+	color:#FFF;
+	display:inline-block;
+	font-family: Microsoft YaHei;
+}
+.blockTD div span.contentSpan{
+	font-size:15px;
+	color:#FFF;
+	display:inline-block;
+	font-family: Microsoft YaHei;
+}
+/* 同心圆 */
+.horizontalTD .onlineBlock{
+	background-color:#FFF;
+	width:7%;
+	height:40px;
+	position:absolute;
+	left:45%;
+	z-index:30;
+	border:5px solid RGB(135,142,141);
+}
+/* 亮色表格 */
+.brightTD{
+	align:center;
+	width:7%;
+}
+.brightTD div{
+	background-color:#4169E1;
+	display:inline-block;
+	text-align:center;
+	width:90%;
+	height:80px;
+	line-height:20px;
+	overflow:hidden;
+}
+.brightTD div span.titleSpan{
+	font-size:15px;
+	color:#FFF;
+	display:inline-block;
+	font-family: Microsoft YaHei;
+}
+.brightTD div span.contentSpan{
+	font-size:15px;
+	color:#FFF;
+	display:inline-block;
+	font-family: Microsoft YaHei;
+}
+/* 暗色表格 */
+.darkTD{
+	align:center;
+	width:7%;
+}
+.darkTD div{
+	background-color:#CCC;
+	display:inline-block;
+	text-align:center;
+	width:90%;
+	height:80px;
+	line-height:20px;
+	overflow:hidden;
+}
+.darkTD div span.titleSpan{
+	font-size:14px;
+	color:#000;
+	display:inline-block;
+	font-family: Microsoft YaHei;
+}
+.darkTD div span.contentSpan{
+	font-size:14px;
+	color:#000;
+	display:inline-block;
+	font-family: Microsoft YaHei;
+}
+/* 横线*/
+.horizontalTD {
+	align:center;
+	height:20px;
+}
+.horizontalTD .containerDiv{
+	align:center;
+	width:100%;
+	heigth:10px;
+	position:relative;
+}
+.horizontalTD .lineDiv{
+	margin-top:5px;
+	width:inherit;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:10px;
+	position:absolute;
+	z-index:10;
+}
+.horizontalTD .line{
+	width:inherit;
+	background-color:RGB(9,163,179);
+	height:10px;
+	position:absolute;
+	z-index:20;
+}
+/* 同心圆 */
+.horizontalTD .concentricCircle{
+	background-color:#FFF;
+	width:12px;
+	height:12px;
+	border-radius:10px;
+	position:absolute;
+	left:45%;
+	z-index:30;
+	border:5px solid RGB(9,163,179);
+}
+/* 竖线 */
+.verticalTD {
+	padding-top:0px;
+	padding-bottom:0px;
+	width:3%;
+}
+.verticalTD div{
+	margin:0px 30px 0px 0px;
+	height:84px;
+	line-height:80px;
+	border-right:10px solid RGB(9,163,179);
+}
+.titleTD {
+	text-align:center;
+	width:7%;
+}
+.titleTD span{
+	font-size:18px;
+}
+.blankTD{
+	width:1%;
+}
+/* 右转上*/
+.rightToUpTD {
+	height:40px;
+	line-height:40px;
+}
+.rightToUpTD div{
+	margin:0px 30px 10px 0px;
+	height:30px;
+	border-right:10px solid RGB(9,163,179);
+	border-bottom:10px solid RGB(9,163,179);
+}
+/* 上转右*/
+.upToRightTD {
+	height:40px;
+	line-height:40px;
+	position:relative;
+}
+.upToRightTD div{
+	height:30px;
+	width:30px;
+	position:absolute;
+	right:0px;
+	top:16px;
+	border-left:10px solid RGB(9,163,179);
+	border-top:10px solid RGB(9,163,179);
+}
+/* 右转下*/
+.rightToDownTD {
+	height:40px;
+	line-height:40px;
+}
+.rightToDownTD div{
+	margin:16px 30px 0px 0px;
+	height:20px;
+	border-right:10px solid RGB(9,163,179);
+	border-top:10px solid RGB(9,163,179);
+}
+/* 下转右*/
+.downToRightTD {
+	height:40px;
+	line-height:40px;
+	position:relative;
+}
+.downToRightTD div{
+	height:30px;
+	width:30px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	border-left:10px solid RGB(9,163,179);
+	border-bottom:10px solid RGB(9,163,179);
+}
+
+.xmztgk {
+	text-indent:2em;
+	font-size:15px;
+}
+/******************************************************************/
+/**********************将监控页面的样式拿过来**************************/
+.stageTable .upToRightDiv{
+	height:30px;
+	width:30px;
+	position:absolute;
+	right:0px;
+	top:10px;
+	border-left:4px solid RGB(135,142,141);
+	border-top:4px solid RGB(135,142,141);
+}
+.stageTable .containerDiv-upToRight{
+	align:center;
+	width:100%;
+	height:8px;
+	position:relative;
+}
+/* 像右箭头匹配的横线*/
+.stageTable .containerDiv-upToRight>.lineDiv{
+	margin-top:5px;
+	width:inherit;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:8px;
+	position:absolute;
+	z-index:10;
+}
+.stageTable .containerDiv-upToRight>.lineDiv>.line{
+	z-index:20;
+	height:36px;
+	width:45%;
+	position:absolute;
+	right:0px;
+	top:-5px;
+	border-left:4px solid RGB(135,142,141);
+	border-top:4px solid RGB(135,142,141);
+}
+/*右向下*/
+.stageTable .containerDiv-rightToDown{
+	width:100%;
+	height:100%;
+}
+.stageTable .containerDiv-rightToDown>.lineDiv{
+	margin-top:0px;
+	width:inherit;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:100%;
+	position:relative;
+	z-index:10;
+}
+.stageTable .containerDiv-rightToDown>.lineDiv>.line{
+	z-index:20;
+	height:47%;
+	width:45%;
+	padding-right:1px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	padding-left:5px;
+	border-right:4px solid RGB(135,142,141);
+	border-top:4px solid RGB(135,142,141);
+}
+.stageTable .containerDiv-rightToDown>.lineDiv>.line-right{
+	z-index:20;
+	height:45%;
+	width:25%;
+	position:absolute;
+	right:45%;
+	bottom:0px;
+	padding-left:5px;
+	padding-bottom:1px;
+	border-right:4px solid RGB(135,142,141);
+	border-top:4px solid RGB(135,142,141);
+}
+
+/*右向上*/
+.stageTable .containerDiv-rightToUp {
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.stageTable .containerDiv-rightToUp>.lineDiv {
+	margin-top:0px;
+	width:inherit;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:inherit;
+	position:absolute;
+	z-index:10;
+}
+.stageTable .containerDiv-rightToUp>.lineDiv>.line{
+	z-index:20;
+	height:45%;
+	width:45%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	padding-left:5px;
+	border-right:4px solid RGB(135,142,141);
+	border-bottom:4px solid RGB(135,142,141);
+}
+
+.stageTable .containerDiv-downToRight{
+	align:center;
+	width:100%;
+	height:4px;
+	position:relative;
+}
+/* 像右箭头匹配的横线*/
+.stageTable .containerDiv-downToRight>.lineDiv{
+	margin-top:0px;
+	width:inherit;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:8px;
+	position:absolute;
+	z-index:10;
+}
+.stageTable .containerDiv-downToRight>.lineDiv>.line{
+	z-index:20;
+	height:34px;
+	width:45%;
+	position:absolute;
+	right:0px;
+	top:-34px;
+	border-left:4px solid RGB(135,142,141);
+	border-bottom:4px solid RGB(135,142,141);
+}
+/* 向右箭头 */
+.stageTable .triangle-right{
+	position:absolute;
+	top:-6px;
+	right:-12px;
+	z-index:30;
+	border:8px solid #000;
+	border-color: transparent transparent transparent RGB(135,142,141);
+	width:0px;
+	height:0px;
+	display:inline-block;
+}
+/* 向下箭头 */
+.stageTable .triangle-down{
+	position:absolute;
+	left:45%;
+	bottom:-12px;
+	z-index:30;
+	border:8px solid #000;
+	border-color: RGB(135,142,141) transparent transparent transparent;
+	width:0px;
+	height:0px;
+	display:inline-block;
+}
+
+/* 向上箭头 */
+.stageTable .triangle-up{
+	position:absolute;
+	left:44%;
+	top:-13px;
+	z-index:30;
+	border:8px solid #000;
+	border-color: transparent transparent RGB(135,142,141) transparent;
+	width:0px;
+	height:0px;
+	display:inline-block;
+	margin-left:1px;
+	margin-right:8px;
+}
+/*竖线*/
+.stageTable .line-S{
+	padding-top:0px;
+	padding-bottom:0px;
+	width:inherit;
+	height:100%;
+	z-index:50;
+	position:relative;
+}
+.stageTable .line-S .div-S{
+	z-index:40;
+	height:40px;
+	width:45%;
+	position:absolute;
+	right:0px;
+	top:0px;
+	border-left:4px solid RGB(135,142,141);
+}
+/* 像右箭头匹配的横线*/
+.stageTable .line-H{
+	margin-top:0px;
+	width:100%;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:8px;
+	z-index:10;
+	position:relative;
+}
+.stageTable .line-H .div-H{
+	z-index:20;
+	height:45%;
+	width:inherit;
+	position:absolute;
+	left:0px;
+	bottom:1px;
+	border-top:4px solid RGB(135,142,141);
+}
+.stageTable .line-H .div-right-H{
+	z-index:20;
+	height:45%;
+	width:inherit;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	border-top:4px solid RGB(135,142,141);
+}
+.stageTable .line-H .div-bottom-H {
+	z-index:20;
+	height:45%;
+	width:inherit;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-bottom:4px solid RGB(135,142,141);
+}
+
+.stageTable .line-H .div-top-H {
+	z-index:20;
+	height:45%;
+	width:inherit;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top:4px solid RGB(135,142,141);
+}
+/*******由左向右*********/
+.stageTable .containerDiv-leftToRight{
+	align:center;
+	width:100%;
+	height:8px;
+	position:relative;
+}
+/* 像右箭头匹配的横线*/
+.stageTable .containerDiv-leftToRight>.lineDiv{
+	margin-top:0px;
+	width:100%;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:8px;
+	z-index:10;
+	position:relative;
+}
+.stageTable .containerDiv-leftToRight>.lineDiv>.line{
+	z-index:20;
+	height:34px;
+	width:inherit;
+	position:absolute;
+	left:0px;
+	top:-0px;
+	border-top:4px solid RGB(135,142,141);
+}
+/*******由上向下*********/
+.stageTable .containerDiv-upToDown{
+	align:center;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+/* 像右箭头匹配的横线*/
+.stageTable .containerDiv-upToDown>.lineDiv{
+	margin-top:0px;
+	width:10px;/* 宽度从父元素继承 */
+	background-color:#FFF;
+	height:100%;
+	z-index:10;
+	left:45%;
+	position:relative;
+}
+.stageTable .containerDiv-upToDown>.lineDiv>.line{
+	z-index:20;
+	height:inherit;
+	width:10px;
+	position:absolute;
+	margin:0px 6px;
+	border-left:4px solid RGB(135,142,141);
+}
+/*******************************************************************/
+/***********************统计概况各颜色方块*****************************/
+.stageTable{
+	width:100%;
+	min-width:960px;
+	font-family: Microsoft YaHei;
+}
+.stageTable .divTitle{
+	vertical-align:middle;
+	text-align:center;
+	background:#4F81BD;
+	line-height:20px;
+	color:#FFF;
+	padding:2px 0px;
+	font-size:16px;
+	font-weight:800;
+}
+.stageTable .divContent{
+	vertical-align:middle;
+	text-align:center;
+	background:#36648B;
+	color:#FFF;
+	padding:2px 0px;
+}
+.stageTable .block-blue{
+	border-radius:10px;
+	vertical-align:middle;
+	text-align:center;
+	background:#36648B;
+	line-height:18px;
+	color:#FFF;
+	padding:6px 0px;
+	margin-left:4px;
+}
+.stageTable .block-gray{
+	border-radius:10px;
+	vertical-align:middle;
+	text-align:center;
+	background:#999999;
+	line-height:18px;
+	color:#FFF;
+	padding:6px 0px;
+	margin-left:4px;
+}
+.stageTable .fieldValue-A{
+	font-size:18px;
+	color:#FFFF00;
+	font-weight:800;
+}
+.stageTable a,.stageTable a:focus,.stageTable a:hover, .stageTable a:active{
+	color:#FFFF00;
+}
+.stageTable .fieldValue-B{
+	font-size:14px;
+	color:#FFFF00;
+	font-weight:800;
+}
+.stageTable .block-red{
+	border-radius:10px;
+	vertical-align:middle;
+	text-align:center;
+	background:#B22222;
+	line-height:18px;
+	color:#FFF;
+	padding:6px 0px;
+	margin-left:4px;
+}
+.stageTable .block-purple{
+	vertical-align:middle;
+	text-align:center;
+	background:#9900FF;
+	line-height:18px;
+	color:#FFF;
+	padding:6px 0px;
+	margin-left:4px;
+}
+.stageTable .block-green{
+	border-radius:10px;
+	vertical-align:middle;
+	text-align:center;
+	background:#71C671;
+	line-height:18px;
+	color:#FFF;
+	padding:6px 0px;
+	margin-left:4px;
+}
+.stageTable .blockTD{
+	height:40px;
+	line-height:40px;
+	position:relative;
+}
+.stageTable .block-total{
+	color:#FFF;
+	font-weight:800;
+	text-align:center;
+	height:70px;
+	min-height:0px;
+	margin-left:4px;
+}
+.stageTable .block-total .title-M{
+	background:#4F81BD;
+	vertical-align:middle;
+	text-align:center;
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+	min-height:0px;
+}
+.stageTable .block-total .title-N{
+	background:#7A99AD;
+	font-size:14px;
+	height:50px;
+	line-height:50px;
+	margin-left:0px;
+	min-height:0px;
+	width:45%;
+}
+.stageTable .block-total .title-O{
+	background:#36648B;
+	font-size:10px;
+	height:25px;
+	line-height:25px;
+	margin-left:0px;
+	min-height:0px;
+}
+.stageTable .block-total .title-P{
+	background:#B22222;
+	font-size:12px;
+	height:25px;
+	line-height:25px;
+	margin-left:0px;
+	min-height:0px;
+}
+.stageTable .block-total .title-Q{
+	height:50px;
+	min-height:0px;
+	margin-left:0px;
+	width:55%;
+}
+/*******************************************************************/
+/*********************各部门监控页面标题下面的横线和统计概况***************/
+.bmjkTitleLine{
+	background: none;
+	color: #000; 
+	border-bottom: #5E5E5E solid 1px;
+	margin-bottom:3px;
+	font-size:20px;
+	padding-bottom:5px;
+}
+.bmjkTitleLine select{
+	margin-bottom:2px;
+}
+.bmjkTjgkBlock{
+	width:100%;
+	vertical-align:middle;
+	background:#34485e;
+	margin-bottom:5px;
+}
+.bmjkTjgkBlock p{
+	padding:8px 5px 8px 8px;
+	color:#FFF;
+	letter-spacing:2px;
+	font-size:16px;
+	line-height: 23px;
+}
+.bmjkTjgkBlock p>.ndText{
+	color:#FFF;
+	font-size:16px;
+	font-weight:100;
+}
+.bmjkTjgkBlock p>span{
+	color:#FFFF00;
+	font-size:18px;
+	font-weight:900;
+}
+.bmjkTjgkBlock a,.bmjkTjgkBlock a:focus, .bmjkTjgkBlock a:hover, .bmjkTjgkBlock a:active{
+	font-weight:900;
+	color:#FFFF00;
+	font-size:18px;
+}
+.tableTheadTr{
+	border-bottom: #fff solid 1px; 
+	border-top: #ccc solid 1px;
+	color: #fff;
+	background:#36648B;
+}
+.tableList{
+	border-bottom: #ccc solid 1px;
+}
+.tableList a,.tableList a:focus,.tableList a:hover, .tableList a:active{
+	font-size:14px;
+	color:#000;
+}
+.tableList td{
+	font-size:14px;
+	color:#000;
+}
+.tableTrEvenColor{
+	background:  #E7E7E7;
+}
+.tableTdAlign{
+	text-align: center;
+}

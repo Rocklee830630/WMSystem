@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html  lang="zh-cn">
+<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet"
+			href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet"
+			href="bootstrap/css/bootstrap-theme.min.css">
+    <!-- Loading Flat UI -->
+    <link href="flat-ui/css/flat-ui.css" rel="stylesheet">
+    <link href="flat-ui/css/demo.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="flat-ui/images/favicon.ico">
+
+<style type="text/css">
+.title{
+     border:1px #ccc solid;
+	  padding: 5px;
+      background: #f6f6f6;
+	  height: 45px;
+	  font-family: SimYou,Microsoft YaHei,"Helvetica Neue", Helvetica, Arial, sans-serif;
+	  font-size: 14px;
+	  font-weight: bold;
+}
+.content{
+	 border:1px #ccc solid;
+	 padding:5px;
+	 height: 45px;
+	 background:#FFF;
+	
+}
+.noboldleft{
+border-left:#ccc solid 0px;
+}
+.noboldtop{
+border-top:#ccc solid 0px;
+}
+.noboldbottom{
+border-bottom:#ccc solid 0px;
+}
+.noboldright{
+border-right:#ccc solid 0px;
+}
+.nobold{
+border-right:#ccc solid 1px;
+border-bottom:#ccc solid 1px;
+border-top:#ccc solid 1px;
+border-left:#ccc solid 1px;
+}
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+<p></p>
+<div class="container">
+	<div class="row">
+	<form class="col-xs-11 col-sm-12 col-md-12">
+      <div class="col-xs-12 col-sm-3 col-md-4" >
+	      <div class="row demo-navigation">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">提报类型</label></div>
+            <div class="col-xs-11  col-md-9" style="padding: 0px;">
+                <div class="btn-group">
+                  <a class="btn btn-primary-fui" href="#fakelink"><span class="fui-time">对部门</span></a>
+                  <a class="btn btn-primary-fui" href="#fakelink"><span class="fui-photo">对领导</span></a>
+              </div> 
+            </div>
+         </div> 
+      </div>
+   <div class="col-xs-12 col-sm-3 col-md-4" style="padding-left: 0px;">
+	 	<div class="control-group">
+	 	<div class="col-xs-1 col-sm-3 col-md-3" style="padding: 0px;">
+	          <label class="control-label">主送部门</label>
+	          </div>
+	          <div class="col-xs-11 col-sm-3 col-md-9" style="padding: 0px;">
+	          <div class="controls">
+	            <select class="input-xlarge">
+			      <option>请选择</option>
+			      <option>办公室</option>
+			      <option>总工办-计划组</option>
+			      <option>总工办-手续组</option>
+			      </select>
+	          </div>
+	          </div>
+		</div>
+	</div>
+      <div class="col-xs-12 col-sm-3 col-md-4"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">抄送人</label>
+          </div>
+            <div class="col-xs-3 col-md-9" style="padding: 0px;">
+             <div class="controls">
+            	<div class="form-group">
+	              <input class="form-control" placeholder="必填" type="text">
+            	</div>
+          		</div>
+            </div>
+       </div>
+      </div>
+         <div class="col-xs-12 col-sm-3 col-md-4"   style="padding-left: 0px;">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">问题标题</label></div>
+            <div class="col-xs-3  col-md-9" style="padding: 0px;">
+                <div class="form-group">
+			        	<input type="text" value="" placeholder="必填" class="form-control" />
+		         </div> 
+            </div>
+      </div>
+   <div class="col-xs-12 col-sm-3 col-md-4"  style="padding-left: 0px;">
+	 	<div class="control-group">
+	 	<div class="col-xs-1 col-sm-3 col-md-3" style="padding: 0px;">
+	          <label class="control-label">问题类型</label>
+	          </div>
+	          <div class="col-xs-3 col-sm-3 col-md-9" style="padding: 0px;">
+	          <div class="controls">
+	            <select class="input-xlarge">
+			      <option>请选择</option>
+			      <option>计划问题</option>
+			      <option>手续问题</option>
+			      <option>设计问题</option>
+			      </select>
+	          </div>
+	          </div>
+		</div>
+	</div>
+      <div class="col-xs-12 col-sm-3 col-md-4"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+           <label class="control-label">问题性质</label>
+          </div>
+            <div class="col-xs-3  col-md-9" style="padding: 0px;">
+             <div class="controls">
+            	<div class="input-append">
+	              <input class="form-control" placeholder="必填" type="text">
+	              <span class="add-on">
+	                <label class="checkbox" for="appendedCheckbox">
+	                  <input type="checkbox" class="">
+	                </label>
+	              </span>
+            	</div>
+          		</div>
+            </div>
+       </div>
+      </div>
+ 
+   <div class="col-xs-12 col-sm-3 col-md-6"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">项目名称</label>
+          </div>
+            <div class="col-xs-3  col-md-9" style="padding: 0px;">
+             <div class="controls">
+            	<div class="input-append">
+	              <input class="form-control" placeholder="必填" type="text">
+	              <span class="add-on">
+	                <label class="checkbox" for="appendedCheckbox">
+	                  <input type="checkbox" class="">
+	                </label>
+	              </span>
+            	</div>
+          		</div>
+            </div>
+       </div>
+      </div>
+       
+   <div class="col-xs-12 col-sm-3 col-md-6"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">标段名称</label>
+          </div>
+            <div class="col-xs-3  col-md-9" style="padding: 0px;">
+             <div class="controls">
+            	<div class="input-append">
+	              <input class="form-control" placeholder="必填" type="text">
+	              <span class="add-on">
+	                <label class="checkbox" for="appendedCheckbox">
+	                  <input type="checkbox" class="">
+	                </label>
+	              </span>
+            	</div>
+          		</div>
+            </div>
+       </div>
+      </div>
+      
+         <div class="col-xs-12 col-sm-3 col-md-6"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">问题描述</label>
+          </div>
+            <div class="col-xs-2  col-md-9" style="padding: 0px;">
+            <div class="controls">
+            <div class="textarea">
+                  <textarea cols="18"  > </textarea>
+            </div>
+           </div>
+            </div>
+       </div>
+      </div>
+       
+   <div class="col-xs-12 col-sm-3 col-md-6"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">处理建议</label>
+          </div>
+            <div class="col-xs-2  col-md-9" style="padding: 0px;">
+             <div class="controls">
+            <div class="textarea">
+                  <textarea cols="18" class=""> </textarea>
+            </div>
+          	</div>
+            </div>
+       </div>
+      </div>
+          <div class="col-xs-12 col-sm-3 col-md-6"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">希望反馈时间</label>
+          </div>
+            <div class="col-xs-3  col-md-9" style="padding: 0px;">
+             <div class="controls">
+            	<div class="input-append">
+	              <input class="form-control" placeholder="必填" type="text">
+	              <span class="add-on">
+	                <label class="checkbox" for="appendedCheckbox">
+	                  <input type="checkbox" class="">
+	                </label>
+	              </span>
+            	</div>
+          		</div>
+            </div>
+       </div>
+      </div>
+       
+   <div class="col-xs-12 col-sm-3 col-md-6"  style="padding-left: 0px;">
+      <div class="control-group">
+          <div class="col-xs-1 col-md-3" style="padding: 0px;">
+          <label class="control-label">希望解决时间</label>
+          </div>
+            <div class="col-xs-3  col-md-9" style="padding: 0px;">
+             <div class="controls">
+            	<div class="input-append">
+	              <input class="form-control" placeholder="必填" type="text">
+	              <span class="add-on">
+	                <label class="checkbox" for="appendedCheckbox">
+	                  <input type="checkbox" class="">
+	                </label>
+	              </span>
+            	</div>
+          		</div>
+            </div>
+       </div>
+      </div>
+  </form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+
+<style type="text/css"> 
+p.slider {
+	margin: 0px;
+	padding: 5px;
+	font-size: 16px;
+	text-align: left;
+	background: #FFFFFF;
+	border: solid 1px #c3c3c3;
+	overflow: hidden;
+	//color: #0088cc;
+}
+/*
+p.slider:hover,p.slider:focus {
+	cursor: pointer;
+	color: #005580;
+	text-decoration: underline;
+}
+*/
+</style>
+<form method="post" action="" id="showForm">
+	<table class="B-table" width="100%">
+		<tr style="display: none;">
+			<th width="8%" class="right-border bottom-border">
+				主键
+			</th>
+			<td width="42%" class="right-border bottom-border">
+				<input class="span12" type="text" name="GC_PQ_ZXM_ID"
+					fieldname="GC_PQ_ZXM_ID" id="zxmid">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				项目ID
+			</th>
+			<td width="42%" class="right-border bottom-border">
+				<input class="span12" type="text" name="XMID" fieldname="XMID"
+					id="xmid">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				标段ID
+			</th>
+			<td width="42%" class="right-border bottom-border">
+				<input class="span12" type="text" name="BDID" fieldname="BDID"
+					id="bdid">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				计划ID
+			</th>
+			<td width="42%" class="right-border bottom-border">
+				<input class="span12" type="text" name="JHID" fieldname="JHID"
+					id="jhid">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				计划数据ID
+			</th>
+			<td width="42%" class="right-border bottom-border">
+				<input class="span12" type="text" name="JHSJID" fieldname="JHSJID"
+					id="GC_JH_SJ_ID">
+			</td>
+		</tr>
+		<tr>
+			<th width="8%" class="right-border bottom-border">
+				项目名称
+			</th>
+			<td width="67%" class="right-border bottom-border" colspan=5>
+				<input class="span12" type="text" name="XMMC" id="xmmc"
+					 fieldname="XMMC" placeholder="必填"
+					check-type="required maxlength">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				标段名称
+			</th>
+			<td width="17%" class="bottom-border">
+				<input class="span12" type="text" name="BDMC" id="bdmc"
+					fieldname="BDMC">
+			</td>
+		</tr>
+		<tr>
+			<th width="8%" class="right-border bottom-border">
+				计划完成时间
+			</th>
+			<td width="17%" class="right-border bottom-border">
+				<input class="span12" type="date" name="WGSJ" id="jhwcsj"
+					fieldname="WGSJ">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				项目负责人
+			</th>
+			<td width="17%" class="bottom-border">
+				<input class="span12" type="text" name="XMFZR" id="xmfzr"
+					keep="true" fieldname="XMFZR">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				管线类别
+			</th>
+			<td width="17%" class="right-border bottom-border">
+				<select class="span12" name="GXLB" fieldname="GXLB" kind="dic"
+					src="GXLB">
+				</select>
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				排序号
+			</th>
+			<td width="17%" class="bottom-border">
+				<input class="span12" type="number" name="PXH" fieldname="PXH">
+			</td>
+		</tr>
+		<tr>
+			<th width="8%" class="right-border bottom-border">
+				排迁子项目
+			</th>
+			<td width="42%" colspan=3 class="bottom-border">
+				<textarea class="span12" rows="1" name="ZXMMC"
+					check-type="maxlength" maxlength="100" fieldname="ZXMMC"></textarea>
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				能否按计划完成
+			</th>
+			<td width="17%" class="right-border bottom-border">
+				<select class="span12" name="ISJHWC" fieldname="ISJHWC" kind="dic"
+					src="SF">
+				</select>
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				场地移交时间
+			</th>
+			<td width="17%" class="bottom-border">
+				<input class="span12" type="date" name="CDYJ_PQ" fieldname="CDYJ_PQ">
+			</td>
+		</tr>
+		<tr>
+			<th width="8%" class="right-border bottom-border">
+				排迁地点
+			</th>
+			<td width="42%" colspan=3 " class="bottom-border">
+				<textarea class="span12" rows="1" name="PQDD" check-type="maxlength"
+					maxlength="100" fieldname="PQDD"></textarea>
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				开工时间
+			</th>
+			<td width="17%" class="right-border bottom-border">
+				<input class="span12" type="date" name="KGSJ" fieldname="KGSJ">
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				完工时间
+			</th>
+			<td width="17%" class="bottom-border">
+				<input class="span12" type="date" name="WCSJ" fieldname="WCSJ">
+			</td>
+		</tr>
+		<tr>
+			<th width="8%" class="right-border bottom-border">
+				排迁方案
+			</th>
+			<td width="42%" colspan=3 class="bottom-border">
+				<textarea class="span12" rows="3" name="PQFA" check-type="maxlength"
+					maxlength="300" fieldname="PQFA"></textarea>
+			</td>
+			<th width="8%" class="right-border bottom-border">
+				备注
+			</th>
+			<td width="42%" colspan=3 class="bottom-border">
+				<textarea class="span12" rows="3" name="BZ" check-type="maxlength"
+					maxlength="4000" fieldname="BZ"></textarea>
+			</td>
+	</table>
+</form>

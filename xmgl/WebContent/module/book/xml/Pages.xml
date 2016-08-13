@@ -1,0 +1,11 @@
+<content width="368" height="450" bgcolor="cccccc" loadercolor="ffffff" panelcolor="5d5d61" buttoncolor="5d5d61" textcolor="ffffff">
+	<page src="pages/flipIndex.jpg"/>
+	<page src="pages/page1.jpg"/>
+	<page src="pages/page2.jpg"/>
+	<page src="pages/page3.jpg"/>
+	<page src="pages/page4.jpg"/>
+	<page src="pages/flipEnd.jpg"/>
+        <page src="..//index.html"/>
+        <page src="pages/1.pdf"/>
+
+</content>

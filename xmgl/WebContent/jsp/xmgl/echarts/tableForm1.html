@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html  lang="zh-cn">
+
+<head>
+<title>新增问题</title>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+	<link rel="stylesheet" href="bootstrap/css/Bootstrap1.css">
+	<link rel="stylesheet" href="bootstrap/css/jquery.mobile.structure-1.4.0.min.css" />
+	<link rel="stylesheet" href="bootstrap/css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="bootstrap/css/base.css" />
+	<link rel="stylesheet" href="bootstrap/css/trans.css" />
+<script type="text/javascript">
+function confirmSubmit() {
+	if(confirm("是否提交？")) {
+		alert("确认提交");
+	} else {
+		alert("取消提交");
+	}
+}
+</script>
+</head>
+	<body>
+    <div id="candidateMain" data-theme="a" style="height: 70%"> 
+   		
+       	<div data-role="collapsible" data-collapsed="false" class="recruitment-detailed">
+       		<h3>问题提报表单</h3>
+       		<form id="base" method="post" action="">
+       			<div data-role="fieldcontain" style="display:none;">
+		        </div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="name">提报类型:</label>    
+	       		    <input type="text" mark="info" name="name" id="name" fieldname="name" placeholder=""  />
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="zsbm">主送部门:</label>    
+	       		    <select data-native-menu="false" mark="info" name="zsbm" id="zsbm" fieldname="zsbm" style="">
+	       		    	<option value="">请选择</option>
+	       		    	<option value="0">办公室</option>
+				        <option value="1">工程部</option>
+				        <option value="2">财务部</option>
+	       		    </select>
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="zgxl">抄送人:</label>
+	       		    <input type="text" mark="info" name="name" id="name" fieldname="name" placeholder="" />
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="gznx">问题标题:</label>
+	       		    <input type="text" mark="info" name="gznx" id="gznx" fieldname="gznx" placeholder="" />
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="wtlx">问题类型:</label>    
+	       		    <select data-native-menu="false" mark="info" name="wtlx" id="wtlx" fieldname="wtlx" >
+						      <option>请选择</option>
+						      <option>计划问题</option>
+						      <option>手续问题</option>
+						      <option>设计问题</option>
+	       		    </select>
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="wtxz">问题性质:</label>    
+	       		    <select data-native-menu="false" mark="info" name="wtxz" id="wtxz" fieldname="wtxz" >
+						<option>请选择</option>
+				        <option>一般件</option>
+				        <option>急件</option>
+				        <option>特急件</option>
+	       		    </select>
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="gznx">项目名称:</label>
+	       		    <input type="text" mark="info" name="gznx" id="gznx" fieldname="gznx" placeholder="" />
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="gznx">标段名称:</label>
+	       		    <input type="text" mark="info" name="gznx" id="gznx" fieldname="gznx" placeholder="" />
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="gznx">希望反馈时间:</label>
+	       		    <input type="date" data-clear-btn="false" name="date-1" id="date-1" value="">
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="txtBirthday">希望解决时间:</label>
+	       		    <input type="date" data-clear-btn="false" name="date-1" id="date-1" value="">
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="more">问题描述:</label>    
+	       		    <textarea mark="info" name="more" id="more" fieldname="more" placeholder="" ></textarea>
+	       		</div>
+	       		<div data-role="fieldcontain">
+	       		    <label for="more">处理建议:</label>    
+	       		    <textarea mark="info" name="more" id="more" fieldname="more" placeholder="" ></textarea>
+	       		</div>
+       		</form>
+       	</div>
+    </div>
+    <div data-role="footer" data-position="fixed" style="background-color: gray;">
+  		<div align="center"><a href="#" id="save" data-role="button" onclick="confirmSubmit()">保存信息</a>
+  		</div> 
+  	</div>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+   	</body>
+</html>

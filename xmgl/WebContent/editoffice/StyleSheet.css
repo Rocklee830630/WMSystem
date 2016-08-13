@@ -1,0 +1,352 @@
+﻿body {
+    background-color: #e3dfdf;
+    margin: 0;
+    border:0px;
+}
+a
+{
+    color: blue;
+}
+.divdefault
+{
+    font-size: 14px;
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    text-align:left;
+    margin: 0px auto 0px auto;
+    width: 710px;
+    height: auto;
+    margin-top: 0;
+    margin-bottom:0;
+    color: #000000;
+}
+.maindiv_top,
+.editmain_top
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+}
+/*新建按钮层样式*/
+.top
+{
+    margin:0;
+    padding-bottom:30px;
+    height:30px;
+}
+/*文件列表背景*/
+.maindiv_middle
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('images/index_main_middle.jpg');
+    text-align: center;
+    background-repeat: repeat-y;
+    border: 0px;
+}
+#maindiv_middle span
+{
+    color: #FF0000;
+    display: block;
+    text-align:left;
+    padding:8px;
+}
+
+.tablebackground
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    background-image: url('images/index_main_middle.jpg');
+    background-repeat:repeat-y;
+    height: 30px;
+}
+/*鼠标经过样式*/
+.mouseover
+{
+    background-color:#f9f9f9;
+}
+/*鼠标离开恢复样式*/
+.mouseout
+{
+    background-color:#f1f5f6;
+}
+/*首面新建按钮样式*/
+.index_button_div
+{
+    height: 65px;
+    width: 442px;
+    position: relative;
+    top: 60px;
+    left: 249px;
+    float: left;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align:right;
+}
+#index_button_div img,
+.edit_button_div img,
+.espbar a
+{
+    cursor:pointer;
+}
+.help
+{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+/*主页页面下部联系信息*/
+.maindiv_bottom
+{
+    color: #343333;
+    font-size: 14px;
+}
+.officelist
+{
+    font-size: 14px;
+    text-align: center;
+    width: 95%;
+}
+/*文件列表的标题样式*/
+.tabletitle
+{
+    background-image: url("images/titlebackground.jpg");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 23px;
+    border-collapse:collapse;
+}
+#maindiv_middle table
+{
+    width:100%;
+    border-collapse:collapse;
+}
+/*定义表格的边框*/
+#maindiv_middle td
+{
+    border: 1px solid #a5b6d2;
+    height:20px;
+}
+#espobject table
+{
+    width:70%;
+    border-collapse:collapse;
+}
+#espobject td
+{
+    border: 1px solid #a5b6d2;
+    height:20px;
+}
+/*编辑页面样式*/
+.editmain
+{
+    font-size: 14px;
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    text-align:left;
+    margin: 0 auto;
+    width: 1280px;
+    height: auto;
+}
+#edittop
+{
+    margin:0;
+    padding-bottom:30px;
+    height:50px;
+}
+.edittablebackground
+{
+    margin: 0;
+    padding-left:20px;
+    border: 0;
+    width: 100%;
+    background-image: url('images/edit_main_middle.jpg');
+    background-repeat:repeat-y;
+    height: 20px;
+}
+.edit_button_div
+{
+    height: 28px;
+    width: 408px;
+    position: relative;
+    top: 51px;
+    left: 392px;
+    float: left;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align:right;
+}
+/*编辑页面中层*/
+.editmain_middle
+{
+    padding:10px;
+    background-image: url('images/edit_main_middle.jpg');
+    text-align: center;
+    background-repeat: repeat-y;
+    border: 0px;
+    width:100%;
+}
+.editmain_left
+{   
+    margin-right:10px;
+    margin-left:10px;
+    float:left;
+    width:15%;
+}
+.funbutton
+{
+    border:1px solid #a5b6d2;
+    background-color:#e9f7ff;
+    margin-top:5px;
+}
+/*左栏JS操作工具栏*/
+.ul
+{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:auto;
+    list-style-type: none;
+    list-style-position:inherit;
+    padding:auto;
+}
+li
+{
+    background-image:url('images/edit_button_background.jpg');
+    background-repeat:repeat-x;
+    width:80%;
+    line-height:23px;
+    border:1px solid #a5b6d2;
+    margin-top:2px;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    color:#343333;
+    cursor: pointer;
+}
+.listtile
+{
+    color:#f00;
+    border:none;
+    background:none;
+    text-align:left;
+}
+.editmain_right
+{
+    float:left;
+    width:80%;
+}
+#formtop
+{
+    color:#343333;
+    width:100%;
+    margin-top:5px;
+}
+#formtop table
+{
+    width:100%;
+    border-collapse:collapse;
+    text-align:left;
+}
+.edit_tabletitle
+{
+    background-image: url("images/titlebackground.jpg");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 20px;
+    text-align:left;
+    color:#343333;
+    padding-left:20px;
+    border:1px solid #a5b6d2;
+}
+.esptoolbar
+{
+    padding-top:20px;
+    margin-bottom:10px;
+    text-align:left;
+    float:left;
+    height: 25px;
+}
+.esptoolbutton
+{
+    position:relative;
+    height:20px;
+    top: -27px;
+    left: 260px;
+    width: 510px;
+}
+/*espbar为印章管理控件页面*/
+.espbar
+{
+    position:relative;
+    padding:10px 0px 10px 0px;
+    height:20px;
+    top: -4px;
+    left: 27px;
+    width: 510px;
+}
+.esptoolbar ul,
+.espbar ul
+{
+    margin-left:0;
+    list-style-type:none;
+    /*list-style-position:inside;*/
+    display:inline;
+}
+.esptoolbar li,
+.espbar li
+{
+    background-image:url('images/edit_button_background.jpg');
+    background-repeat:repeat-x;
+    line-height:20px;
+    width:20%;
+    margin:5px; 
+    text-align:center;
+    vertical-align:middle;
+    float:left;
+}
+#officecontrol
+{
+     clear:left;
+     height:1050px;
+}
+/*编辑页面下部联系信息*/
+.edit_bottom
+{
+    clear:both;
+    width:100%;
+    color: #343333;
+    font-size: 14px;
+}
+.conmpanyinfo
+{
+  padding-left:20px;
+}
+input
+{
+    border: 1px solid #a5b6d2;
+    width: 200px;
+    text-align: left;
+    left: 0px;
+}
+#delattach
+{
+    width:20px;
+}
+input:focus
+{
+    border-color:red;
+}
+select
+{
+    border: 1px solid #a5b6d2;
+    width: 153px;
+    text-align: left;
+    color:#343333;
+}
+.fileup
+{
+    width:204px;
+}

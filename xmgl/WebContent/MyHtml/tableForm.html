@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html  lang="zh-cn">
+<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet"
+			href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet"
+			href="bootstrap/css/bootstrap-theme.min.css">
+<style type="text/css">
+.title{
+     border:1px #ccc solid;
+	  padding: 5px;
+      background: #f6f6f6;
+	  height: 45px;
+	  font-family: SimYou,Microsoft YaHei,"Helvetica Neue", Helvetica, Arial, sans-serif;
+	  font-size: 14px;
+	  font-weight: bold;
+}
+.content{
+	 border:1px #ccc solid;
+	 padding:5px;
+	 height: 45px;
+	 background:#FFF;
+	
+}
+.noboldleft{
+border-left:#ccc solid 0px;
+}
+.noboldtop{
+border-top:#ccc solid 0px;
+}
+.noboldbottom{
+border-bottom:#ccc solid 0px;
+}
+.noboldright{
+border-right:#ccc solid 0px;
+}
+.nobold{
+border-right:#ccc solid 1px;
+border-bottom:#ccc solid 1px;
+border-top:#ccc solid 1px;
+border-left:#ccc solid 1px;
+}
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+	<body>
+	<p></p>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+					 <label class="control-label">提报类型</label>
+				 </div>
+				<div class="col-xs-4 .col-sm-3 col-md-2 content   noboldright noboldbottom">
+				 	<label class="radio inline">
+			        <input type="radio" value="1" name="group" style="margin: 5px;" checked="checked">
+			                    <font style="margin: 25px;">对部门</font>
+			      </label>
+		      </div>
+		      <div class="col-xs-4 .col-sm-3 col-md-1 content  noboldleft noboldright noboldbottom">
+			      <label class="radio inline">
+			        <input type="radio" value="2" name="group" >对领导
+			      </label>
+			 </div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+						  <label class="control-label">主送部门</label>
+				</div>
+				<div class="col-xs-8 .col-sm-3 col-md-3 content  noboldright noboldbottom" >
+						  <div class="controls">
+				            <select class="input-xlarge">
+						      <option>请选择</option>
+						      <option>办公室</option>
+						      <option>总工办-计划组</option>
+						      <option>总工办-手续组</option>
+						      </select>
+				          </div>
+				</div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom" >
+						<label class="control-label">抄送人</label>
+				</div>
+				<div class="col-xs-8 .col-sm-3 col-md-3 content   noboldbottom" >
+						 <div class="controls">
+            	<div class="form-group">
+	              <input class="form-control" placeholder="必填" type="text">
+            	</div>
+          		</div>
+				</div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+					 <label class="control-label">问题标题</label>
+				 </div>
+				<div class="col-xs-8 .col-sm-3 col-md-3 content   noboldright noboldbottom">
+				 <div class="form-group">
+			        	<input type="text" value="" placeholder="必填" class="form-control" />
+		         </div> 
+		      </div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+						  <label class="control-label">问题类型</label>
+				</div>
+				<div class="col-xs-8 .col-sm-3 col-md-3 content  noboldright noboldbottom" >
+						  <div class="controls">
+				            <select class="input-xlarge">
+						      <option>请选择</option>
+						      <option>计划问题</option>
+						      <option>手续问题</option>
+						      <option>设计问题</option>
+						      </select>
+				          </div>
+				</div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom" >
+						<label class="control-label">问题性质</label>
+				</div>
+				<div class="col-xs-8 .col-sm-3 col-md-3 content   noboldbottom" >
+					 <select class="input-xlarge">
+				      <option>请选择</option>
+				      <option>一般件</option>
+				      <option>急件</option>
+				      <option>特急件</option>
+				      </select>
+				</div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+					 <label class="control-label">项目名称</label>
+				 </div>
+				<div class="col-xs-8 .col-sm-3 col-md-5 content   noboldright noboldbottom">
+			        	<input type="text" value="" placeholder="必填" class="form-control" />
+		      </div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+						  <label class="control-label">标段名称</label>
+				</div>
+				<div class="col-xs-8 .col-sm-3 col-md-5 content   noboldbottom" >
+						<input type="text" value="" placeholder="必填" class="form-control" />
+				</div>
+				<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+					 <label class="control-label">问题描述</label>
+				 </div>
+				<div class="col-xs-8 .col-sm-3 col-md-5 content   noboldright noboldbottom">
+			        	  <textarea cols="" class=""> </textarea>
+		      </div>
+		      <div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright noboldbottom">
+					 <label class="control-label">处理建议</label>
+				 </div>
+				<div class="col-xs-8 .col-sm-3 col-md-5 content   noboldbottom">
+						   <textarea cols="" class=""> </textarea>
+				</div>
+					<div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright ">
+					 <label class="control-label">希望反馈时间</label>
+				 </div>
+				<div class="col-xs-8 .col-sm-3 col-md-5 content   noboldright ">
+			         <input class="form-control"  type="date">
+		      </div>
+		      <div class="col-xs-4 .col-sm-3 col-md-1 title  noboldright ">
+					 <label class="control-label">希望解决时间</label>
+				 </div>
+				<div class="col-xs-8 .col-sm-3 col-md-5 content   ">
+						<input class="form-control"  type="date">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
