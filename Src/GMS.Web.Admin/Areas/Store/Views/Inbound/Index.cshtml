@@ -1,0 +1,176 @@
+﻿@using GMS.Framework.Contract
+@using GMS.Framework.Utility
+@using GMS.Framework.Web.Controls
+@using GMS.Web
+                         
+
+@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+ 
+<div class="row-fluid">
+    <div class="span4">
+        <div>
+            @*<a class="btn red" id="delete" href="javascript:;"><i class="icon-trash icon-white"></i> 删除</a>*@
+            <a class="btn blue thickbox" title='入库材料' href="@Url.Action("Create")?TB_iframe=true&height=400&width=650"><i class="icon-plus icon-white"></i> 材料入库</a>
+        </div>
+    </div>
+    <div class="span8">
+        @using (Html.BeginForm(null, null, null, FormMethod.Get, new { id = "search" }))
+        {
+            <div class="dataTables_filter">
+                <label>
+                    <button type="submit" class="btn">搜索 <i class="icon-search"></i></button>
+                </label>
+                <label>
+                    <span>材料名称：</span>
+                    @Html.TextBox("Title", null, new { @class = "m-wrap small" }) 
+                </label>
+                <label>
+                    <span>订单类别：</span>
+                    @*@Html.DropDownList("ChannelId", "所有频道")*@
+                    @Html.TextBox("Title", null, new { @class = "m-wrap small" })
+                    
+                </label>
+                <label>
+                    <span>客户名称：</span>
+                    @*@Html.DropDownList("ChannelId", "所有频道")*@
+                    @Html.TextBox("Title", null, new { @class = "m-wrap small" })
+
+                </label>
+            </div>
+        }
+    </div>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                入库记录：
+                @*<th style="width: 8px;">
+                    <input type="checkbox" id="checkall" class="group-checkable" />
+                </th>*@
+                <th>
+                    客户名称
+                </th>
+                <th>
+                    订单类别
+                </th>
+                <th>
+                    材料名称
+                </th>
+                <th>
+                    品名
+                </th>
+                <th class="hidden-480">
+                    门幅
+                </th>
+                <th>
+                    基数/米
+                </th> 
+                <th>
+                    入库时间
+                </th> 
+                <th>
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @*<td>
+                    <input type="checkbox" class="checkboxes" name='ids' value='test' />
+                </td>*@
+                <td>
+                    凯撒VOGELE
+                </td>
+                <td>
+                    36930上衣
+                </td>
+                <td>
+                    大身里布
+                </td>
+                <td>
+                    210T黑色
+                </td>
+                <td class="hidden-480">
+                    1.5
+                </td>
+                <td>
+                    0.95
+                </td> 
+                <td>
+                    2016/7/18 13:45:00
+                </td> 
+                <td>
+                    <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                        <i class="icon-edit"></i>
+                        修改
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                @*<td>
+                    <input type="checkbox" class="checkboxes" name='ids' value='test' />
+                </td>*@
+                <td>
+                    凯撒VOGELE
+                </td>
+                <td>
+                   36930上衣
+                </td>
+                <td>
+                    袖里
+                </td>
+                <td>
+                    黑白条
+                </td>
+                <td class="hidden-480">
+                    1.5
+                </td>
+                <td>
+                    0.5
+                </td>
+                <td>
+                    2016/7/17 08:40:00
+                </td>
+                <td>
+                <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                    <i class="icon-edit"></i>
+                    修改
+                </a>
+            </td>
+            </tr>
+            <tr>
+                @*<td>
+                    <input type="checkbox" class="checkboxes" name='ids' value='test' />
+                </td>*@
+                <td>
+                    凯撒VOGELE
+                </td>
+                <td>
+                   36931裤子
+                </td>
+                <td>
+                    无纺衬
+                </td>
+                <td>
+                    4625粘合衬（无纺）
+                </td>
+                <td class="hidden-480">
+                    1
+                </td>
+                <td>
+                    0.14
+                </td> 
+                <td>
+                    2016/7/14 09:10:00
+                </td> 
+                <td>
+                <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                    <i class="icon-edit"></i>
+                    修改
+                </a>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Core.Log.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Core.Log.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Core.Log.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Core.Log.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.pdb
+E:\GMS\GMS\bin\GMS.Core.Log.dll
+E:\GMS\GMS\bin\GMS.Core.Log.pdb
+E:\GMS\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.dll
+E:\GMS\GMS\Src\GMS.Core.Log\obj\Debug\GMS.Core.Log.pdb

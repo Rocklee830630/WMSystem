@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Crm.BLL.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Crm.BLL.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Crm.BLL.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Crm.BLL.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.pdb
+E:\GMS\GMS\bin\GMS.Crm.BLL.dll
+E:\GMS\GMS\bin\GMS.Crm.BLL.pdb
+E:\GMS\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.dll
+E:\GMS\GMS\Src\GMS.Crm.BLL\obj\Debug\GMS.Crm.BLL.pdb

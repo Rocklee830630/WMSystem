@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Core.Module.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Core.Module.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Core.Module.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Core.Module.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.pdb
+E:\GMS\GMS\bin\GMS.Core.Module.dll
+E:\GMS\GMS\bin\GMS.Core.Module.pdb
+E:\GMS\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.dll
+E:\GMS\GMS\Src\GMS.Core.Module\obj\Debug\GMS.Core.Module.pdb

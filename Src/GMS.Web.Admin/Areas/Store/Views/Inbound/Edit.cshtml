@@ -1,0 +1,75 @@
+﻿@using GMS.Framework.Contract
+@using GMS.Framework.Utility
+@using GMS.Framework.Web.Controls
+@using GMS.Web
+@{
+    Layout = "~/Views/Shared/_Layout.Edit.cshtml"; ;
+}
+
+@section PageSpecificStyleSheetIncludes{
+    <style type="text/css">
+        .controls label {
+            display: inline;
+        }
+    </style>
+}
+@section MainContent{
+
+            <div class="portlet-body form-horizontal form-bordered form-row-stripped">
+                <div class="row-fluid">
+                    <div class="control-group">
+                        <label class="control-label"><span class="required">*</span>客户名称：</label>
+                        <div class="controls">
+                            @Html.DropDownList("OrderType")
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label"><span class="required">*</span>订单类型：</label>
+                        <div class="controls">
+                            @Html.DropDownList("OrderType")
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label"><span class="required">*</span>材料名称：</label>
+                        <div class="controls">
+                            @*@Html.TextBox("Title", "异色里料灰", new { @class = "m-wrap large" })*@
+                            @Html.DropDownList("Materialnames")
+                        </div>
+                    </div> 
+                    <div class="control-group">
+                        <label class="control-label"><span class="required">*</span>入库数量：</label>
+                        <div class="controls">
+                            @Html.TextBox("name", "144", new { @class = "m-wrap large" })
+                        </div>
+                    </div>
+                    @*<div class="control-group">
+                        <label class="control-label"><span class="required">*</span>单价(元)：</label>
+                        <div class="controls">
+                            @Html.TextBox("name", "2", new { @class = "m-wrap large" })
+                        </div>
+                    </div>*@
+                    <div class="control-group">
+                        <label class="control-label">品名：</label>
+                        <div class="controls">
+                            @Html.TextBox("name", "1CM双面胶（码）", new { @class = "m-wrap large" })
+                        </div>
+                    </div> 
+                    <div class="control-group">
+                        <label class="control-label">门幅：</label>
+                        <div class="controls">
+                            @Html.TextBox("name", "1.5", new { @class = "m-wrap large" })
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">基数/米：</label>
+                        <div class="controls">
+                            @Html.TextBox("name", "3.3", new { @class = "m-wrap large" })
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+
+}

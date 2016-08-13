@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Cms.DAL.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Cms.DAL.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Cms.DAL.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Cms.DAL.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.pdb
+E:\GMS\GMS\bin\GMS.Cms.DAL.dll
+E:\GMS\GMS\bin\GMS.Cms.DAL.pdb
+E:\GMS\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.dll
+E:\GMS\GMS\Src\GMS.Cms.DAL\obj\Debug\GMS.Cms.DAL.pdb

@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Core.Upload.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Core.Upload.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Core.Upload.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Core.Upload.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.pdb
+E:\GMS\GMS\bin\GMS.Core.Upload.dll
+E:\GMS\GMS\bin\GMS.Core.Upload.pdb
+E:\GMS\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.dll
+E:\GMS\GMS\Src\GMS.Core.Upload\obj\Debug\GMS.Core.Upload.pdb

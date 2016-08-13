@@ -1,0 +1,195 @@
+﻿@using GMS.Framework.Contract
+@using GMS.Framework.Utility
+@using GMS.Framework.Web.Controls
+@using GMS.Crm.Contract
+@using GMS.Web
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+@section PageSpecificStyleSheetIncludes{
+<link href="/Content/zTree.theme.metro.css" rel="stylesheet" />
+}
+
+<div class="row-fluid">
+    <div class="span3">
+        <div id="menuContent" class="menuContent" style="width:100%;border:1px solid rgb(170,170,170);z-index:10;">
+            <ul id="treeDemo" class="ztree" style="margin-top:0; width:100%; height:auto;"></ul>
+        </div>
+    </div>
+    <div class="span4">
+        <div>
+            <a class="btn red" id="delete" href="javascript:;"><i class="icon-trash icon-white"></i> 删除</a>
+            <a class="btn blue thickbox" title='添加材料' href="@Url.Action("Create")?TB_iframe=true&height=400&width=650"><i class="icon-plus icon-white"></i> 添加材料</a>
+        </div>
+    </div>
+    <div class="span9">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th style="width: 8px;">
+                        <input type="checkbox" id="checkall" class="group-checkable" />
+                    </th>
+                    <th>
+                        材料名称
+                    </th>
+                    <th>
+                        品名
+                    </th>
+                    <th class="hidden-480">
+                        门幅
+                    </th>
+                    <th>
+                        基数/米
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> 
+                    <th style="width: 8px;">
+                        <input type="checkbox" id="checkall" class="group-checkable" />
+                    </th>
+                    <td>
+                        大身里布
+                    </td>
+                    <td>
+                        210T黑色
+                    </td>
+                    <td class="hidden-480">
+                        1.5
+                    </td>
+                    <td>
+                        0.95
+                    </td>
+                    <td>
+                        <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                            <i class="icon-edit"></i>
+                            修改
+                        </a>
+                    </td>
+                </tr>
+                <tr> 
+                    <th style="width: 8px;">
+                        <input type="checkbox" id="checkall" class="group-checkable" />
+                    </th>
+                    <td>
+                        袖里
+                    </td>
+                    <td>
+                        黑白条
+                    </td>
+                    <td class="hidden-480">
+                        1.5
+                    </td>
+                    <td>
+                        0.5
+                    </td>
+                    <td>
+                        <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                            <i class="icon-edit"></i>
+                            修改
+                        </a>
+                    </td>
+                </tr>
+                <tr> 
+                    <th style="width: 8px;">
+                        <input type="checkbox" id="checkall" class="group-checkable" />
+                    </th>
+                    <td>
+                        无纺衬
+                    </td>
+                    <td>
+                        4625粘合衬（无纺）
+                    </td>
+                    <td class="hidden-480">
+                        1
+                    </td>
+                    <td>
+                        0.14
+                    </td>
+                    <td>
+                        <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                            <i class="icon-edit"></i>
+                            修改
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@section PageSpecificJavascriptIncludes{
+    <script src="@Url.StaticFile("/Scripts/jquery-1.10.2.js")" type="text/javascript"></script>
+    <script src="@Url.StaticFile("/Content/bootstrap/js/bootstrap.js")" type="text/javascript"></script>
+    <script src="@Url.StaticFile("/Scripts/jquery.ztree.all-3.5.js")" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+    var setting = {
+        view: {
+            addHoverDom: addHoverDom,
+            removeHoverDom: removeHoverDom,
+            selectedMulti: false
+        },
+        check: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        edit: {
+            enable: true
+        }
+    };
+
+    var zNodes = [
+      { id: 1, pId: 0, name: "凯撒VOGELE", open: true },
+      { id: 11, pId: 1, name: "36930上衣" },
+      { id: 111, pId: 11, name: "大身里布" },
+      { id: 112, pId: 11, name: "袖里" },
+      { id: 113, pId: 11, name: "异色里料灰" },
+      { id: 114, pId: 11, name: "有纺衬" },
+      { id: 12, pId: 1, name: "36931裤子" },
+      { id: 121, pId: 12, name: "无纺衬" },
+      { id: 122, pId: 12, name: "商标挂牌贴纸枪针（付）" },
+      { id: 123, pId: 12, name: "拉条纤带双面胶（付）" },
+      { id: 124, pId: 12, name: "软腰衬" },
+      { id: 13, pId: 1, name: "36932马甲", isParent: true },
+      { id: 131, pId: 13, name: "软腰衬" },
+      { id: 132, pId: 13, name: "异色里料灰" },
+      { id: 133, pId: 13, name: "有纺衬" },
+      { id: 2, pId: 0, name: "C&A" },
+      { id: 21, pId: 2, name: "上衣", open: true },
+      { id: 22, pId: 2, name: "T恤" },
+      { id: 23, pId: 2, name: "裙子" },
+      { id: 3, pId: 0, name: "利郎", isParent: true }
+    ];
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+
+    function addHoverDom(treeId, treeNode) {
+        var sObj = $("#" + treeNode.tId + "_span");
+        if (treeNode.editNameFlag || $("#addBtn_" + treeNode.tId).length > 0) return;
+        var addStr = "<span class='button add' id='addBtn_" + treeNode.tId
+          + "' title='add node' onfocus='this.blur();'></span>";
+        sObj.after(addStr);
+        var btn = $("#addBtn_" + treeNode.tId);
+        if (btn) btn.bind("click", function () {
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+            zTree.addNodes(treeNode, { id: (100 + newCount), pId: treeNode.id, name: "new node" + (newCount++) });
+            return false;
+        });
+    };
+    function removeHoverDom(treeId, treeNode) {
+        $("#addBtn_" + treeNode.tId).unbind().remove();
+    };
+
+    </script>
+}

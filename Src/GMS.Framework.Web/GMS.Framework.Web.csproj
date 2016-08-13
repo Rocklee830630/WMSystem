@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA76F90E-2594-44C8-89D6-302A0C8757AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMS.Framework.Web</RootNamespace>
+    <AssemblyName>GMS.Framework.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc.Extensions, Version=1.1.0.6, Culture=neutral, PublicKeyToken=d631f4e4b226a032, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Mvc.Extensions.1.1.1.2\lib\net40\System.Web.Mvc.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizeFilterAttribute.cs" />
+    <Compile Include="AuthorizeIgnoreAttribute.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="Controls\CheckBoxList.cs" />
+    <Compile Include="Controls\HtmlPrefixScope.cs" />
+    <Compile Include="Controls\MvcPager\PagerBuilder.cs" />
+    <Compile Include="Controls\MvcPager\PagerHelper.cs" />
+    <Compile Include="Controls\MvcPager\PagerItem.cs" />
+    <Compile Include="Controls\MvcPager\PagerOptions.cs" />
+    <Compile Include="Controls\RadioBoxList.cs" />
+    <Compile Include="Controls\SeoPager.cs" />
+    <Compile Include="ExplicitException.cs" />
+    <Compile Include="HttpContextBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMS.Framework.Contract\GMS.Framework.Contract.csproj">
+      <Project>{11214D97-F23C-4E16-AA12-ECD824454744}</Project>
+      <Name>GMS.Framework.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMS.Framework.Utility\GMS.Framework.Utility.csproj">
+      <Project>{9F519EF8-800F-40CB-9545-9AEADF0F387D}</Project>
+      <Name>GMS.Framework.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\img\diy\1_close.png" />
+    <Content Include="Content\img\diy\1_open.png" />
+    <Content Include="Content\img\diy\2.png" />
+    <Content Include="Content\img\diy\3.png" />
+    <Content Include="Content\img\diy\4.png" />
+    <Content Include="Content\img\diy\5.png" />
+    <Content Include="Content\img\diy\6.png" />
+    <Content Include="Content\img\diy\7.png" />
+    <Content Include="Content\img\diy\8.png" />
+    <Content Include="Content\img\diy\9.png" />
+    <Content Include="Content\img\line_conn.gif" />
+    <Content Include="Content\img\line_conn.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\metro.gif" />
+    <Content Include="Content\img\metro.png" />
+    <Content Include="Content\img\zTreeStandard.gif" />
+    <Content Include="Content\img\zTreeStandard.png" />
+    <Content Include="Content\zTree.css" />
+    <Content Include="Content\zTree.min.css" />
+    <Content Include="Content\zTree.theme.metro.css" />
+    <Content Include="Content\zTree.theme.metro.min.css" />
+    <Content Include="Scripts\jquery.ztree.all-3.5.js" />
+    <Content Include="Scripts\jquery.ztree.all-3.5.min.js" />
+    <Content Include="Scripts\jquery.ztree.dropdown.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

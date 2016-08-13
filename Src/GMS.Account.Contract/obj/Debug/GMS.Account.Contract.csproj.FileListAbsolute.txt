@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Account.Contract.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Account.Contract.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Account.Contract.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Account.Contract.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.pdb
+E:\GMS\GMS\bin\GMS.Account.Contract.dll
+E:\GMS\GMS\bin\GMS.Account.Contract.pdb
+E:\GMS\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.dll
+E:\GMS\GMS\Src\GMS.Account.Contract\obj\Debug\GMS.Account.Contract.pdb

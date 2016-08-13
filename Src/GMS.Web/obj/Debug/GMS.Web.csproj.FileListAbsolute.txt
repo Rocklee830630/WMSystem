@@ -1,0 +1,15 @@
+C:\Users\li\Desktop\GMS\bin\GMS.Web.dll
+C:\Users\li\Desktop\GMS\bin\GMS.Web.pdb
+C:\Users\li\Desktop\GMS\Src\GMS.Web\obj\Debug\GMS.Web.csprojResolveAssemblyReference.cache
+C:\Users\li\Desktop\GMS\Src\GMS.Web\obj\Debug\GMS.Web.dll
+C:\Users\li\Desktop\GMS\Src\GMS.Web\obj\Debug\GMS.Web.pdb
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Web.dll
+C:\Users\xiaod\Desktop\GMS\bin\GMS.Web.pdb
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Web\obj\Debug\GMS.Web.csprojResolveAssemblyReference.cache
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Web\obj\Debug\GMS.Web.dll
+C:\Users\xiaod\Desktop\GMS\Src\GMS.Web\obj\Debug\GMS.Web.pdb
+E:\GMS\GMS\bin\GMS.Web.dll
+E:\GMS\GMS\bin\GMS.Web.pdb
+E:\GMS\GMS\Src\GMS.Web\obj\Debug\GMS.Web.csprojResolveAssemblyReference.cache
+E:\GMS\GMS\Src\GMS.Web\obj\Debug\GMS.Web.dll
+E:\GMS\GMS\Src\GMS.Web\obj\Debug\GMS.Web.pdb

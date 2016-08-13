@@ -1,0 +1,162 @@
+﻿@using GMS.Framework.Contract
+@using GMS.Framework.Utility
+@using GMS.Framework.Web.Controls
+@using GMS.Crm.Contract
+@using GMS.Web
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row-fluid">
+    <div class="span4">
+        <div>
+            <a class="btn red" id="delete" href="javascript:;"><i class="icon-trash icon-white"></i> 删除</a>
+            <a class="btn blue thickbox" title='入库材料' href="@Url.Action("Create")?TB_iframe=true&height=400&width=650"><i class="icon-plus icon-white"></i> 材料入库</a>
+            <a class="btn green thickbox" title='入库材料' href="@Url.Action("Create")?TB_iframe=true&height=400&width=650"><i class="icon-plus icon-white"></i> 成品出库</a>
+        </div>
+    </div>
+    <div class="span8">
+        @using (Html.BeginForm(null, null, null, FormMethod.Get, new { id = "search" }))
+        {
+            <div class="dataTables_filter">
+                <label>
+                    <button type="submit" class="btn">搜索 <i class="icon-search"></i></button>
+                </label>
+                <label>
+                    <span>物料名称：</span>
+                    @Html.TextBox("Title", null, new { @class = "m-wrap small" })
+                </label>
+                <label>
+                    <span>订单类别：</span>
+                    @*@Html.DropDownList("ChannelId", "所有频道")*@
+                    @*@Html.TextBox("Title", null, new { @class = "m-wrap small" })*@
+                    @Html.DropDownList("OrderType")
+                </label>
+            </div>
+        }
+    </div>
+
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th style="width: 8px;">
+                    <input type="checkbox" id="checkall" class="group-checkable" />
+                </th>
+                <th>
+                    订单类别
+                </th>
+                <th>
+                    材料名称
+                </th>
+                <th>
+                    品名
+                </th>
+                <th class="hidden-480">
+                    门幅
+                </th>
+                <th>
+                    基数/米
+                </th>
+                <th>
+                    库存量
+                </th>
+                <th>
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" class="checkboxes" name='ids' value='test' />
+                </td>
+                <td>
+                    VOGELE订单36931-上衣
+                </td>
+                <td>
+                    大身里布
+                </td>
+                <td>
+                    210T黑色
+                </td>
+                <td class="hidden-480">
+                    1.5
+                </td>
+
+                <td>
+                    0.95
+                </td>
+                <td>
+                    1234
+                </td>
+                <td>
+                    <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                        <i class="icon-edit"></i>
+                        修改
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="checkboxes" name='ids' value='test' />
+                </td>
+                <td>
+                    VOGELE订单-上衣
+                </td>
+                <td>
+                    袖里
+                </td>
+                <td>
+                    黑白条
+                </td>
+                <td class="hidden-480">
+                    1.5
+                </td>
+
+                <td>
+                    0.5
+                </td>
+                <td>
+                    8090
+                </td>
+                <td>
+                    <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                        <i class="icon-edit"></i>
+                        修改
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="checkboxes" name='ids' value='test' />
+                </td>
+                <td>
+                    VOGELE订单-裤子
+                </td>
+                <td>
+                    无纺衬
+                </td>
+                <td>
+                    4625粘合衬（无纺）
+                </td>
+                <td class="hidden-480">
+                    1
+                </td>
+
+                <td>
+                    0.14
+                </td>
+                <td>
+                    7689
+                </td>
+                <td>
+                    <a class="btn mini purple thickbox" title='编辑文章内容' href="@Url.Action("Edit", 1)?TB_iframe=true&height=400&width=650">
+                        <i class="icon-edit"></i>
+                        修改
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
